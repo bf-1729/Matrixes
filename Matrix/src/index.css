@@ -7,6 +7,10 @@
     padding: 3rem;
     text-align: center;
 }
+.box:hover{
+    cursor: pointer;
+    border: none;
+}
 .main{
     background-color: rgb(204, 156, 119);
 }
