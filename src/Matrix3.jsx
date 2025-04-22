@@ -9,7 +9,6 @@ const Matrix3 = () => {
   const [clickSequence, setClickSequence] = useState([]);
 
   const handleBoxClick = (index) => {
-    // If it's the last box
     if (index === lastBoxIndex) {
       clickSequence.forEach((clickedIndex, i) => {
         setTimeout(() => {
@@ -18,12 +17,11 @@ const Matrix3 = () => {
             updated[clickedIndex] = "orange";
             return updated;
           });
-        }, i * 200); // delay for animation effect
+        }, i * 200);
       });
       return;
     }
-
-    // If not already clicked
+    
     if (!clickSequence.includes(index)) {
       const updatedColors = [...colors];
       updatedColors[index] = "green";
